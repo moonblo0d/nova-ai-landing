@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NOVA — AI-асистент для малого бізнесу</title>
+<meta name="description" content="NOVA відповідає вашим клієнтам у Telegram, Instagram і на сайті 24/7, приймає заявки й передає їх у CRM.">
+<meta name="theme-color" content="#06060c">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script type="importmap">{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }</script>
+</head>
+<body>
+<canvas id="scene" aria-hidden="true"></canvas>
+<div class="fallback-orb" aria-hidden="true"></div>
+
+<header class="nav">
+  <a href="#" class="logo"><span class="dot"></span>NOVA</a>
+  <nav class="nav-links">
+    <a href="#features">Можливості</a>
+    <a href="#demo">Демо</a>
+    <a href="#pricing">Ціни</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <a href="#cta" class="btn btn-sm">Спробувати</a>
+</header>
+
+<main>
+  <section class="hero" data-stage="0">
+    <p class="pill reveal">✦ AI-асистент для малого бізнесу</p>
+    <h1 class="reveal">Ваш найкращий менеджер<br><span class="grad">не спить і не втомлюється</span></h1>
+    <p class="lead reveal">NOVA відповідає клієнтам у Telegram, Instagram і на сайті 24/7, записує на послуги й передає заявки в CRM — поки ви займаєтеся справою.</p>
+    <div class="actions reveal">
+      <a href="#cta" class="btn">Підключити за 1 день</a>
+      <a href="#demo" class="btn btn-ghost">Подивитися демо</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <section class="section" id="features" data-stage="1">
+    <h2 class="reveal">Що вміє NOVA</h2>
+    <div class="features">
+      <article class="feature reveal"><span class="ic">💬</span><h3>Відповідає за 3 секунди</h3><p>Ціни, графік, адреса, наявність — з вашої бази знань, людською мовою.</p></article>
+      <article class="feature reveal"><span class="ic">📅</span><h3>Записує клієнтів</h3><p>Пропонує вільні слоти, підтверджує запис і нагадує за день до візиту.</p></article>
+      <article class="feature reveal"><span class="ic">🔗</span><h3>Інтеграції</h3><p>Telegram, Instagram, сайт, Google Sheets, CRM — заявки потрапляють куди треба.</p></article>
+      <article class="feature reveal"><span class="ic">🧑‍💼</span><h3>Передає людині</h3><p>Складне питання або скарга — одразу сповіщення менеджеру з усім контекстом.</p></article>
+    </div>
+  </section>
+
+  <section class="section split" id="demo" data-stage="2">
+    <div class="reveal">
+      <h2>Ось як це виглядає</h2>
+      <p class="muted">Реальний сценарій для барбершопу: клієнт пише о 23:40, NOVA записує його на ранок. Власник бачить заявку в CRM, коли прокидається.</p>
+      <ul class="checks">
+        <li>Розуміє вільну форму питання</li>
+        <li>Тримає контекст розмови</li>
+        <li>Не вигадує те, чого немає в базі</li>
+      </ul>
+      <button class="btn btn-ghost" id="replay">↻ Повторити діалог</button>
+    </div>
+    <div class="phone reveal" aria-label="Демо діалогу з AI-асистентом">
+      <div class="phone-top"><span class="avatar">N</span><div><b>NOVA · BLADE Barber</b><small id="typingState">онлайн</small></div></div>
+      <div class="chat" id="chat"></div>
+    </div>
+  </section>
+
+  <section class="section" id="how" data-stage="3">
+    <h2 class="reveal">Запуск за 3 кроки</h2>
+    <ol class="steps">
+      <li class="reveal"><b>01</b><h3>Бриф</h3><p>Розповідаєте про бізнес: послуги, ціни, графік, типові питання.</p></li>
+      <li class="reveal"><b>02</b><h3>Налаштування</h3><p>Ми навчаємо асистента й підключаємо канали та CRM.</p></li>
+      <li class="reveal"><b>03</b><h3>Запуск</h3><p>Тиждень тестуємо разом, далі NOVA працює сама, а ви бачите звіти.</p></li>
+    </ol>
+  </section>
+
+  <section class="section" id="pricing" data-stage="4">
+    <h2 class="reveal">Ціни без сюрпризів</h2>
+    <div class="billing reveal" role="group" aria-label="Період оплати">
+      <button class="active" data-period="month">Щомісяця</button>
+      <button data-period="year">Щороку <span>−20%</span></button>
+    </div>
+    <div class="plans">
+      <article class="plan reveal"><h3>Старт</h3><p class="muted">1 канал, до 500 діалогів</p><div class="cost"><span data-month="990" data-year="790">990</span> ₴<small>/міс</small></div><ul><li>Telegram або сайт</li><li>База знань до 50 питань</li><li>Заявки в Google Sheets</li></ul><a href="#cta" class="btn btn-ghost btn-full">Обрати</a></article>
+      <article class="plan featured reveal"><span class="tag">Популярний</span><h3>Бізнес</h3><p class="muted">3 канали, до 3000 діалогів</p><div class="cost"><span data-month="2490" data-year="1990">2490</span> ₴<small>/міс</small></div><ul><li>Telegram, Instagram, сайт</li><li>Онлайн-запис і нагадування</li><li>Інтеграція з CRM</li></ul><a href="#cta" class="btn btn-full">Обрати</a></article>
+      <article class="plan reveal"><h3>Про</h3><p class="muted">Без лімітів</p><div class="cost"><span data-month="5900" data-year="4720">5900</span> ₴<small>/міс</small></div><ul><li>Усі канали та API</li><li>Кастомні сценарії</li><li>Персональний менеджер</li></ul><a href="#cta" class="btn btn-ghost btn-full">Обрати</a></article>
+    </div>
+  </section>
+
+  <section class="section" id="faq" data-stage="5">
+    <h2 class="reveal">Питання</h2>
+    <div class="faq">
+      <details class="reveal"><summary>Асистент не буде вигадувати відповіді?</summary><p>Ні. NOVA відповідає лише з вашої бази знань. Якщо відповіді немає — чесно каже про це й кличе менеджера.</p></details>
+      <details class="reveal"><summary>Скільки часу займає запуск?</summary><p>Базове підключення — 1 робочий день. З інтеграцією CRM та записом — до 5 днів.</p></details>
+      <details class="reveal"><summary>Що, якщо клієнт хоче поговорити з людиною?</summary><p>Достатньо написати «менеджер» — розмова передається вам у Telegram з повною історією.</p></details>
+      <details class="reveal"><summary>Чи можна спробувати безкоштовно?</summary><p>Так, 14 днів тестового періоду на тарифі «Бізнес» без прив'язки картки.</p></details>
+    </div>
+  </section>
+
+  <section class="section cta" id="cta" data-stage="6">
+    <div class="cta-box reveal">
+      <h2>Запустимо NOVA у вашому бізнесі</h2>
+      <p class="muted">Залиште контакт — покажемо демо на прикладі вашої ніші.</p>
+      <form id="ctaForm" class="cta-form" novalidate>
+        <input name="name" placeholder="Ім'я" autocomplete="name" required>
+        <input name="contact" placeholder="Telegram або телефон" required>
+        <button class="btn" type="submit">Отримати демо</button>
+      </form>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© NOVA</span>
+  <span class="muted">Демо-проєкт для портфоліо: продукт і ціни вигадані. 3D — three.js.</span>
+</footer>
+
+<script type="module" src="assets/main.js"></script>
+</body>
+</html>
